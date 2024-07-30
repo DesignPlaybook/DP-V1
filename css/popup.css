@@ -1,0 +1,46 @@
+.switch-button {
+    position: fixed;
+    z-index: 10;
+    /* left: -100px; */
+    top: 30%;
+    transform: translateY(-50%);
+    background: linear-gradient(45deg, #ff6b6b, #f8e71c, #7ed321, #50e3c2, #007bff);
+    background-size: 400% 400%;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    transition: left 0.5s ease, background-position 10s ease;
+    width: 250px;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.switch-button.slide-in {
+    left: 10px;
+}
+
+.switch-button.slide-out {
+    left: -250px;
+}
+
+.popup-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
